@@ -1,0 +1,24 @@
+{
+  "name": "aem-clientlibs-analyzer",
+  "version": "0.0.1",
+  "description": "CLI utility to visualize client-side libraries in an AEM project with a graph representation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunob15/aem-clientlibs-analyzer.git"
+  },
+  "keywords": [
+    "aem",
+    "clientlibs",
+    "analyzer"
+  ],
+  "author": "Bruno Bradach",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunob15/aem-clientlibs-analyzer/issues"
+  },
+  "homepage": "https://github.com/brunob15/aem-clientlibs-analyzer#readme"
+}
