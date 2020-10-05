@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "aem-clientlibs-analyzer": "src/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brunob15/aem-clientlibs-analyzer.git"
