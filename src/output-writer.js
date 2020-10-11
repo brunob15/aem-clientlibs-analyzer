@@ -1,8 +1,11 @@
 const fs = require('fs');
 
 const outputDir = __dirname + '/../output';
-const outputFile = outputDir + '/output.txt';
+const outputFile = outputDir + '/output.json';
 
+/*
+    * Creates an output folder in case it does not exist or clears in other case.
+*/
 const clearOrCreateOutputDir = function() {
     const outputDirExists = fs.existsSync(outputDir);
     const outputFileExists = fs.existsSync(outputFile);
@@ -15,13 +18,9 @@ const clearOrCreateOutputDir = function() {
     }
 }
 
-module.exports = function(lines) {
+module.exports = function(json) {
     clearOrCreateOutputDir();
-
-    lines.forEach(line => {
-        line = `${line}\n`;
-        fs.appendFile(outputFile, line, function (err) {
-            if (err) return console.log(err);
-        });
+    fs.writeFile(outputFile, JSON.stringify(json), function (err) {
+        if (err) return console.log(err);
     });
 }
