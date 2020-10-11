@@ -24,5 +24,7 @@
     "url": "https://github.com/brunob15/aem-clientlibs-analyzer/issues"
   },
   "homepage": "https://github.com/brunob15/aem-clientlibs-analyzer#readme",
-  "dependencies": {}
+  "dependencies": {
+    "glob": "^7.1.6"
+  }
 }
