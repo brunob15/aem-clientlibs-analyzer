@@ -1,6 +1,5 @@
 const fs = require('fs');
 const glob = require('glob');
-const writeOutput = require('./output-writer');
 
 const filename = '.content.xml';
 const GLOB_OPTIONS = {
@@ -62,12 +61,7 @@ const addIfClientlib = function(clientlibs, file) {
     * The result is an array of objects containing the information
     * of all the clientlibraries.
 */
-const findAllClientlibs = function() {
+module.exports = function() {
     const files = glob.sync(filename, GLOB_OPTIONS);
     return files.reduce(addIfClientlib, []);
 }
-
-module.exports = function() {
-    const clientlibs = findAllClientlibs();
-    writeOutput(clientlibs);
-};
